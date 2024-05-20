@@ -27,11 +27,11 @@ class TCartCounter extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-              color: TColors.black,
+              color: TColors.black.withOpacity(0.5),
               borderRadius: BorderRadius.circular(100),
             ),
             child: Center(
-              child: Text('2',style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white,fontSizeFactor: 0.0)),
+              child: Text('2',style: Theme.of(context).textTheme.labelLarge!.apply(color: TColors.white,fontSizeFactor: 0.8)),
             ),
           ),
         ),
