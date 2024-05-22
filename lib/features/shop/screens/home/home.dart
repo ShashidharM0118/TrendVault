@@ -1,13 +1,9 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:t_store/features/shop/screens/home/widgets/home_catagories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 
-import '../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
@@ -26,7 +22,7 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///APPBAR
@@ -59,6 +55,9 @@ class HomeScreen extends StatelessWidget {
 
                         ///srollable categories
                         HomeCategories(),
+                        const SizedBox(height: TSizes.spaceBtwSections*2,),
+
+
                       ],
                     ),
                   )

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import 'package:t_store/common/widgets/login_signup/form_divider.dart';
@@ -29,13 +27,13 @@ class SignupScreen extends StatelessWidget {
               Text(TTexts.signupTitle,style: Theme.of(context).textTheme.headlineMedium,),
               const  SizedBox(height: TSizes.spaceBtwSections,),
               ///form
-              TSignupForm(),
+              const TSignupForm(),
               const SizedBox(height: TSizes.spaceBtwItems,),
               ///Divider
               TFormDivider(dividerText: TTexts.orSignUpWith.capitalize!,),
               const SizedBox(height: TSizes.spaceBtwSections,),
               ///Social Buttons
-              TSocialButtons(),
+              const TSocialButtons(),
             ],
           ),
         )

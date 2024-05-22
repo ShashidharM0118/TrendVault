@@ -1,8 +1,6 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screens/password_configuratoin/forgot_password.dart';
 import 'package:t_store/features/authentication/screens/signup/signup.dart';
@@ -26,13 +24,13 @@ class TLoginForm extends StatelessWidget {
           child: Column(
             children: [
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     prefixIcon: Icon(Iconsax.direct_right),
                     labelText: TTexts.email),
               ),
               const SizedBox(height: TSizes.spaceBtwInputFields),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.password_check),
                   labelText: TTexts.password,
                   suffixIcon: Icon(Iconsax.eye_slash),
@@ -64,7 +62,7 @@ class TLoginForm extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () =>Get.to(()=>const NavigationMenu() ), child: Text(TTexts.signIn))),
+                      onPressed: () =>Get.to(()=>const NavigationMenu() ), child: const Text(TTexts.signIn))),
 
               const SizedBox(height: TSizes.spaceBtwItems),
 
@@ -73,7 +71,7 @@ class TLoginForm extends StatelessWidget {
                   width: double.infinity,
                   child: OutlinedButton(
                       onPressed: () =>Get.to(()=>const SignupScreen()),
-                      child: Text(TTexts.createAccount))),
+                      child: const Text(TTexts.createAccount))),
             ],
           ),
         ));

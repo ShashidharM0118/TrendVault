@@ -7,7 +7,6 @@ import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 import 'package:t_store/features/authentication/controllers_onboarding/onboarding_controller.dart';
 
-import '../../../controllers_onboarding/onboarding_controller.dart';
 
 class OnBoardingDotNavigation extends StatelessWidget {
   const OnBoardingDotNavigation({

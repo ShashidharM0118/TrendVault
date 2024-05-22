@@ -26,12 +26,12 @@ class VerifyEmailScreen extends StatelessWidget {
         body: SingleChildScrollView(
           //padding to give default equal spaces
           child: Padding(
-            padding: EdgeInsets.all(TSizes.defaultSpace),
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
             child: Column(
               children: [
                 ///Image
                 Image(
-                  image: AssetImage(
+                  image: const AssetImage(
                     TImages.deliveredEmailIllustration,
                   ),
                   width: THelperFunctions.screenWidth() * 0.6,

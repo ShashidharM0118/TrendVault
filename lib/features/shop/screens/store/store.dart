@@ -4,13 +4,11 @@ import 'package:t_store/common/widgets/brand/brand_cart.dart';
 import 'package:t_store/features/shop/screens/store/widgets/category_tab.dart';
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/appbar/tabbar.dart';
-import '../../../../common/widgets/brand/brand_showcase.dart';
 import '../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
@@ -42,20 +40,20 @@ class StoreScreen extends StatelessWidget {
                     : TColors.white,
                 expandedHeight: 448,
                 flexibleSpace: Padding(
-                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  padding: const EdgeInsets.all(TSizes.defaultSpace),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       // -- Search bar
-                      SizedBox(height: TSizes.spaceBtwItems),
-                      TSearchContainer(
+                      const SizedBox(height: TSizes.spaceBtwItems),
+                      const TSearchContainer(
                         text: 'Search in Store',
                         showBorder: true,
                         showBackground: false,
                         padding: EdgeInsets.zero,
                       ),
-                      SizedBox(height: TSizes.spaceBtwSections),
+                      const SizedBox(height: TSizes.spaceBtwSections),
 
                       /// Featured brands
                       TSectionHeading(
@@ -65,13 +63,13 @@ class StoreScreen extends StatelessWidget {
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
                       TGridLayout(itemCount: 4,mainAxisExtent: 80, itemBuilder: (_,index){
-                        return TBrandCard(showBorder: false,);
+                        return const TBrandCard(showBorder: false,);
                       }),
                     ],
                   ),
                 ),
                 ///tabs
-                bottom: TTabBar(tabs: [
+                bottom: const TTabBar(tabs: [
                   Tab(child: Text('Sports')),
                   Tab(child: Text('Furniture')),
                   Tab(child: Text('Electronics')),
@@ -81,7 +79,7 @@ class StoreScreen extends StatelessWidget {
               ),
             ];
           },
-          body: TabBarView(children: [
+          body: const TabBarView(children: [
               TCategoryTab(),
               TCategoryTab(),
               TCategoryTab(),

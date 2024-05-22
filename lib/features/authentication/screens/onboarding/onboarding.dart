@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/features/authentication/controllers_onboarding/onboarding_controller.dart';
@@ -9,11 +8,6 @@ import 'package:t_store/features/authentication/screens/onboarding/widgets/onboa
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
-import '../../controllers_onboarding/onboarding_controller.dart';
-import '../../controllers_onboarding/onboarding_controller.dart';
-import '../../controllers_onboarding/onboarding_controller.dart';
-import '../../controllers_onboarding/onboarding_controller.dart';
-import '../../controllers_onboarding/onboarding_controller.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {
@@ -56,7 +50,7 @@ class OnBoardingScreen extends StatelessWidget {
         const OnBoardingDotNavigation(),
 
         ///circular button
-        OnBoardingNextButton()
+        const OnBoardingNextButton()
       ],
     ));
   }

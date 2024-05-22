@@ -32,11 +32,11 @@ class TverticalImageText extends StatelessWidget {
                 color: backgroundColor?? (THelperFunctions.isDarkMode(context)?TColors.black:TColors.white) ,
                 borderRadius: BorderRadius.circular(100),
               ),
-              child: Center(
+              child: const Center(
                 child: Image(image: AssetImage(TImages.acerlogo),fit: BoxFit.cover ,),
               ),
             ),
-            SizedBox(height: TSizes.spaceBtwItems/2,),
+            const SizedBox(height: TSizes.spaceBtwItems/2,),
             SizedBox(width: 55, child: Text(title,style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor), maxLines: 1, overflow: TextOverflow.ellipsis,))
           ],
         ),
