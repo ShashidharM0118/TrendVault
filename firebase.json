@@ -1,0 +1,23 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "trendvault-a71dd",
+          "appId": "1:223123144586:android:ff763878a8b7a99cad5273",
+          "fileOutput": "android/app/google-services.json"
+        }
+      }
+    },
+    "dart": {
+      "lib/firebase_options.dart": {
+        "projectId": "trendvault-a71dd",
+        "configurations": {
+          "android": "1:223123144586:android:ff763878a8b7a99cad5273",
+          "ios": "1:223123144586:ios:c82d0ce8c8988c68ad5273",
+          "web": "1:223123144586:web:8e6fb48af3f0d9f3ad5273"
+        }
+      }
+    }
+  }
+}

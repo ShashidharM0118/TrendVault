@@ -11,6 +11,7 @@ import '../../../../common/widgets/text/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../address/address.dart';
 import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -70,7 +71,9 @@ class SettingsScreen extends StatelessWidget {
                   TSettingsMenuTile(
                       icon: Iconsax.safe_home,
                       title: "My Addresses",
-                      subTitle: "Set shopping delivery address"),
+                      subTitle: "Set shopping delivery address",
+                      onTap: ()=>Get.to(()=>UserAddressScreen()),
+                  ),
                   TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
                       title: "My Cart",
@@ -126,3 +129,4 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 }
+
