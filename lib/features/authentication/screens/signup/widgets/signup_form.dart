@@ -125,34 +125,41 @@ class TSignupForm extends StatelessWidget {
 
             ///terms and condition
             Row(
+
               children: [
                 SizedBox(
                     width: 24,
                     height: 24,
                     child: Obx(()=> Checkbox(value: controller.privacyPolicy.value, onChanged: (value)=> controller.privacyPolicy.value = !controller.privacyPolicy.value))),
                 const SizedBox(
-                  width: TSizes.spaceBtwItems,
+                  width: TSizes.spaceBtwItems/2,
                 ),
                 Text.rich(TextSpan(children: [
                   TextSpan(
                       text: '${TTexts.iAgreeTo} ',
-                      style: Theme.of(context).textTheme.bodySmall),
+                      style: Theme.of(context).textTheme.bodySmall!.apply(
+                          fontSizeFactor: 0.8
+                      )),
                   TextSpan(
                       text: TTexts.privacyPolicy,
                       style: Theme.of(context).textTheme.bodyMedium!.apply(
                         color: dark ? TColors.white : TColors.primary,
                         decoration: TextDecoration.underline,
                         decorationColor: dark ? TColors.white : TColors.primary,
+                          fontSizeFactor: 0.8
                       )),
                   TextSpan(
                       text: TTexts.and,
-                      style: Theme.of(context).textTheme.bodySmall),
+                      style: Theme.of(context).textTheme.bodySmall!.apply(
+                          fontSizeFactor: 0.8
+                      )),
                   TextSpan(
                       text: ' ${TTexts.termsOfUse}',
                       style: Theme.of(context).textTheme.bodyMedium!.apply(
                         color: dark ? TColors.white : TColors.primary,
                         decoration: TextDecoration.underline,
                         decorationColor: dark ? TColors.white : TColors.primary,
+                        fontSizeFactor: 0.8
                       )),
                 ]))
               ],

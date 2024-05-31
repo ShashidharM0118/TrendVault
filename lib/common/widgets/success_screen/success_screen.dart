@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/spacing_styles.dart';
+import 'package:t_store/utils/constants/image_strings.dart';
 
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
 import '../../../utils/helpers/helper_functions.dart';
+import '../loaders/animation_loader.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subtile, required this.onPressed});
@@ -20,12 +22,7 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               ///Image
-              Image(
-                image: AssetImage(
-                  image,
-                ),
-                width: THelperFunctions.screenWidth() * 0.6,
-              ),
+              TAnimationLoaderWidget(text: "", animation: TImages.successRegistration),
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
