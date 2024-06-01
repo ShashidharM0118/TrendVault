@@ -18,7 +18,7 @@ class SignupController extends GetxController {
   /// Variables                             // Controller for email input
   final hidePassword = true.obs; //hide and show the password
   final privacyPolicy = true.obs; //to toggle terms and service checkbox
-  final email= TextEditingController();
+  final email = TextEditingController();
   final lastName = TextEditingController();
   final username = TextEditingController();
   final password = TextEditingController();

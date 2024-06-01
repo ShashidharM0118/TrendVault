@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:t_store/features/authentication/screens/login/login.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -116,7 +118,7 @@ class SettingsScreen extends StatelessWidget {
                     const SizedBox(height: TSizes.spaceBtwSections),
                     SizedBox(
                       width: double.infinity,
-                      child: OutlinedButton (onPressed: (){}, child: const Text('Logout')),
+                      child: OutlinedButton (onPressed: ()=>AuthenticationRepository.instance.logout(), child: const Text('Logout')),
                     ),
                     const SizedBox (height: TSizes.spaceBtwSections * 2.5),
                     ],
