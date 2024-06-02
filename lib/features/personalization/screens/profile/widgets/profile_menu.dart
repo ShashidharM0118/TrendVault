@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/personalization/screens/profile/widgets/change_name.dart';
 
 class TProfileMenu extends StatelessWidget {
   const TProfileMenu({
@@ -40,7 +42,10 @@ class TProfileMenu extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Icon(icon, size: 18),
+              child: IconButton(
+                icon: Icon(icon, size: 18),
+                onPressed: onPressed,
+              ),
             ),
           ],
         ),

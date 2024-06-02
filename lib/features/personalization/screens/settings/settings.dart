@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
+import 'package:t_store/features/personalization/controllers/user_controller.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -21,6 +22,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -41,14 +43,14 @@ class SettingsScreen extends StatelessWidget {
                     leading: const TCircularImage(
                         image: TImages.user, width: 50, height: 50, padding: 0),
                     title: Text(
-                      'Coding with T',
+                      controller.user.value.fullName,
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall!
                           .apply(color: TColors.white),
                     ),
                     subtitle: Text(
-                      'support@codingwithT.com',
+                      controller.user.value.email,
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!

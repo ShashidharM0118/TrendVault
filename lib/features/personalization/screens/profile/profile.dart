@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/personalization/controllers/user_controller.dart';
+import 'package:t_store/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:t_store/features/personalization/screens/profile/widgets/profile_menu.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
@@ -12,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: const TAppBar(
         showBackArrow: true,
@@ -47,9 +54,9 @@ class ProfileScreen extends StatelessWidget {
                 title: 'Profile Information', showActionButton: false),
             const SizedBox(height: TSizes.spaceBtwItems),
             TProfileMenu(
-                title: 'Name', value: 'Coding with T', onPressed: () {}),
+                title: 'Name', value: controller.user.value.fullName, onPressed: (() => Get.to(() => ChangeName()))),
             TProfileMenu(
-                title: "Username", value: 'coding_with_t', onPressed: () {}),
+                title: "Username", value: controller.user.value.username, onPressed: () {}),
             const SizedBox(height: TSizes.spaceBtwItems),
             const Divider(),
             const SizedBox(height: TSizes.spaceBtwItems),
@@ -59,22 +66,27 @@ class ProfileScreen extends StatelessWidget {
                 title: 'Personal Information', showActionButton: false),
             const SizedBox(height: TSizes.spaceBtwItems),
             TProfileMenu(
-              title:
-                  "User ID', value: 45689', icon: Iconsax.copy, onPressed: (00)",
-              onPressed: () {},
-              value: '',
+              title: "User ID", value: controller.user.value.id, icon: Iconsax.copy, onPressed: () {},
             ),
             TProfileMenu(
-                title: "E-mail", value: "coding_with_t", onPressed: () {}),
+                title: "E-mail", value: controller.user.value.email, onPressed: () {}),
             TProfileMenu(
-                title: 'Phone Number',
-                value: '+92-317-8859528',
+                title: 'Phone No.',
+                value: controller.user.value.phoneNumber,
                 onPressed: () {}),
             TProfileMenu(title: "Gender", value: 'Male', onPressed: () {}),
             TProfileMenu(
-                title: 'Date of Birth', value: '10 Oct, 1994', onPressed: () {})
+                title: 'Date of Birth', value: '18 Oct, 1994', onPressed: () {}),
+            const Divider(),
 
+            const SizedBox(height: TSizes.spaceBtwItems),
 
+            Center(
+              child: TextButton(
+                onPressed: () => controller.deleteAccountWarningPopup(),
+                child: const Text('Close Account', style: TextStyle(color: Colors.red)),
+              ),
+            ),
           ],
         ),
       ),
